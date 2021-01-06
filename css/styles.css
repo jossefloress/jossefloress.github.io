@@ -1,0 +1,338 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Gill Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace; */
+  /* default box-sizing is content-box */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #203354;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  /* width: auto; */
+  font-size: 275%;
+}
+
+nav {
+  background-color: #203354;
+  /* 
+    This means that when the nav bar
+    reaches the top,
+    it'll stick to the top of the page 
+  */
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul a li {
+ /* 24.7% *4 = 98.8% + 1% padding = 99.8%  */
+  width: 24%;
+  display: inline-block;
+  padding: 1%;
+  margin: 0 auto; 
+  text-align: center;
+  color: white; 
+}
+
+
+a li:link {
+
+}
+
+a li:visited {
+
+}
+
+a li:hover {
+  background-color: rgb(241, 238, 238);
+  color: #203354;
+}
+
+a li:active {
+
+}
+
+
+main {
+  margin: 30px 0 50px 0;
+}
+
+
+.line {
+  width: 65%;
+  margin: 0px auto 40px auto;
+  border-radius: 15px;
+  /* background-color: rgb(241, 238, 238); */
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  overflow: auto;
+  border: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.linetitle {
+  color: black;
+  padding-top: 2%;
+}
+
+
+/* You cannot modify the height margin/padding of Inline level elements */
+/* Inline-block elemeents are inline but you can modify the height margin/padding. */
+.boxes {
+  background-color: white;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 1% 2%;
+  margin: 2%;
+}
+
+.boxes:hover {
+  box-shadow: 0 4px 8px 0 rgba(20, 33, 54, .5), 
+  0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.boxes ul li {
+  margin: 8px 20px;
+  text-indent: -5px;
+  text-align: left;
+}
+
+.one
+{
+  /* 96% because I'm using box-sizing: border-box; */
+  /* 96% width + 2% margin + 2% padding = 100% */
+  width: 96%; 
+}
+
+/* Use this class when you want two boxes in one line. */
+.two {
+  /* 46% because I'm using box-sizing: border-box; */
+  /* 46% width + 2% margin + 2% padding = 50% (* 2) =100% */
+  width: 46%;
+}
+
+.three
+{
+  /* 29.33% because I'm using box-sizing: border-box; */
+  /* 29.33% width + 2% margin + 2% padding = 33.33% (* 3) = 99.99% */
+  width: 29.33%;
+}
+
+.four {
+  /* 21% because I'm using box-sizing: border-box; */
+  /* 21% width + 2% margin + 2% padding = 25% (* 3) = 100% */
+  width: 21%;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align-last: center; 
+}
+
+.right {
+  float:  right;
+}
+
+#education {
+
+}
+
+#utd {
+  width: 50%;
+}
+
+#collin {
+  width: 35%;
+}
+
+#experience {
+
+}
+
+#projects {
+
+}
+
+#certifications {
+
+}
+
+#more {
+
+}
+
+#contact {
+  background-color: #203354;
+}
+
+#contact h2 {
+  color: white;
+}
+
+#contact .boxes:hover {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 
+  0 6px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+footer
+{
+  position: fixed;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: normal;
+  z-index: 10;
+}
+
+footer ul {
+  margin: 0 auto;
+}
+
+footer ul li {
+  display: inline-block;
+  background: #203354;
+  width: 10%;
+  max-width: 120px;
+  /* min-width: 70px; */
+  border-radius: 50px;
+  border: 0.5px solid white;
+  margin: 0 1%;
+}
+
+
+footer ul a li img {
+  width: 50%;
+  max-width: 25px;
+  margin-top: 3%;
+  filter: invert();
+}
+
+footer ul a li img:hover {
+  filter: none;
+}
+
+
+@media only screen and (max-width:1200px){
+  .line {
+    width: 80%;
+  }
+
+}
+
+/* The changes done to the large responsive layout 
+become the default for smaller layouts.
+But those changes can be overwritten to make further 
+changes to any selector you want */
+
+/* Responsive layout - when the screen is less
+than 1000px wide, make the columns stack on
+top of each other instead of next to each other */
+@media only screen and (max-width:1000px){
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul a li {
+    font-size: 1em;
+    padding: 3% 0.5% ;
+  }
+
+  .line {
+    width: 85%;
+    overflow: auto;    
+  }
+
+  #utd {
+    width: 40%;
+  }
+
+  #collin {
+    width: 25%;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    /* 96% because I'm using box-sizing: border-box; */
+    /* 96% width + 2% margin + 2% padding = 100% */
+    width: 96%;
+  }
+
+  footer ul li {
+    width: 12%;
+  }
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide */
+@media only screen and (max-width:700px){
+
+  /* Here, the changes that me made to nav ul a li 
+    in the larger layout (max-width: 1000px) are being
+    overwritten.*/
+
+  nav ul a li {
+    font-size: 0.9em;
+    padding: 5% 0.5% ;
+  }
+
+  .line {
+    width: 95%;
+  }
+
+  /* Since the larger layout made changes to nav ul, .one,
+    .two, .three, .four, #utd, and #collin, the changes
+    made there will be the default for the smaller layouts. */
+
+  footer ul a li {
+    width: 16%;
+  }
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 330px */
+  @media only screen and (max-width:330px){
+     header h1{
+      font-size: 225%;
+    }
+  
+    nav ul a li {
+      font-size: 0.8em;
+      width: 23%;
+    }
+
+    footer ul a li {
+      width: 20%;
+      /* min-width: 0; */
+    }
+  }
+
+  
