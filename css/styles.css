@@ -214,8 +214,8 @@ footer ul {
 footer ul li {
   display: inline-block;
   background: #203354;
-  width: 10%;
-  max-width: 120px;
+  width: 6%;
+  /* max-width: 120px; */
   /* min-width: 70px; */
   border-radius: 50px;
   border: 0.5px solid white;
