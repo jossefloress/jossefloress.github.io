@@ -55,40 +55,47 @@ nav ul a li {
 }
 
 
-a li:link {
-
-}
-
-a li:visited {
-
-}
-
 a li:hover {
   background-color: rgb(241, 238, 238);
   color: #203354;
 }
 
-a li:active {
 
+/* hr tags are being used as margin 
+between each line and the top and bottom
+of the main tag */
+hr {
+  visibility: hidden;
+  padding-top: 60px;;
 }
 
+#education {
+  padding-top: 60px;
+}
 
 main {
-  margin: 30px 0 50px 0;
+  /* Use the commented margin if you 
+ remove the an hr tags which are being used
+ as margin */
+  /* margin: 30px 0 65px 0; */
 }
-
 
 .line {
   width: 65%;
-  margin: 0px auto 40px auto;
+  /* Use the commented margin if you 
+ remove the an hr tags which are being used
+ as margin */
+  /* margin: 0px auto 40px auto; */
+  margin: 0 auto;
   border-radius: 15px;
-  /* background-color: rgb(241, 238, 238); */
   background-color: whitesmoke;
   color: black;
   text-align: center;
   overflow: auto;
   border: 1px solid lightgray;
   padding-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(141, 142, 143, 0.5), 
+  0 6px 20px 0 rgba(207, 207, 207, 0.5);
 }
 
 .linetitle {
@@ -97,19 +104,12 @@ main {
 }
 
 
-/* You cannot modify the height margin/padding of Inline level elements */
-/* Inline-block elemeents are inline but you can modify the height margin/padding. */
 .boxes {
   background-color: white;
   border-radius: 15px;
   display: inline-block;
   padding: 1% 2%;
   margin: 2%;
-}
-
-.boxes:hover {
-  box-shadow: 0 4px 8px 0 rgba(20, 33, 54, .5), 
-  0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .boxes ul li {
@@ -157,43 +157,43 @@ main {
   float:  right;
 }
 
-#education {
+#educationline {
 
 }
 
-#utd {
+#utdimg {
   width: 50%;
 }
 
-#collin {
+#collinimg {
   width: 35%;
 }
 
-#experience {
+#experienceline {
 
 }
 
-#projects {
+#projectsline .boxes p{
+  text-align: left;  
+}
+
+#certificationsline {
 
 }
 
-#certifications {
+#moreline {
 
 }
 
-#more {
-
-}
-
-#contact {
+#contactline {
   background-color: #203354;
 }
 
-#contact h2 {
+#contactline h2 {
   color: white;
 }
 
-#contact .boxes:hover {
+#contactline .boxes:hover {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 
   0 6px 20px 0 rgba(255, 255, 255, 0.5);
 }
@@ -216,8 +216,6 @@ footer ul li {
   display: inline-block;
   background: #203354;
   width: 6%;
-  /* max-width: 120px; */
-  /* min-width: 70px; */
   border-radius: 50px;
   border: 0.5px solid white;
   margin: 0 1%;
@@ -332,7 +330,6 @@ top of each other instead of next to each other */
 
     footer ul a li {
       width: 20%;
-      /* min-width: 0; */
     }
   }
 
