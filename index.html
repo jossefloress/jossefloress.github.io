@@ -11,12 +11,19 @@
 
 <body id="top">
   <header>
-    <h1>Jose I. Flores</h1>
+    <a href="https://jossefloress.github.io/Resume-Website/">
+      <h1>Jose I. Flores</h1>
+    </a>
   </header>
 
 
   <nav>
     <ul>
+      <!-- If you remove the hr tags (which are being
+        used as margin), add 'line' to end of the href
+        for each of the 4 following anchors-->
+
+      <!-- example: href="educationline" -->
       <a href="#education">
         <li>Education</li>
       </a>
@@ -34,22 +41,10 @@
       </a>
     </ul>
   </nav>
+
+
+
   <main>
-
-    <!-- <div class="line">
-      <div class="one boxes">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero id illum provident voluptatibus voluptates,
-          et sed explicabo similique sint. Veniam ratione voluptate cum eveniet, nihil eligendi numquam suscipit at
-          quia?
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, obcaecati vitae ad quam ipsam, a ea
-          aliquam iusto dicta id quod esse nobis debitis ab eveniet consectetur minus pariatur odit.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, molestias cumque cum dolor nemo sit quia
-          esse placeat dolorem id magnam minus incidunt? Labore ullam iste possimus optio necessitatibus vitae.
-        </p>
-      </div>
-    </div> -->
 
     <hr id="education">
     <div class="line" id="educationline">
@@ -59,13 +54,8 @@
         <h3>The University of Texas at Dallas</h3>
         <p><em>May 2022</em></p>
         <p><em>GPA: 3.42</em></p>
-        <!-- 
         <br>
-        <p>
-          <em> GPA: 3.42/4.00 &emsp;&emsp; May 2022 </em>
-        </p>
-        -->
-        <br>
+
         <p>B.S., Computer Science</p>
         <p> Hispanic Scholarship Fund Scholar</p>
       </div>
@@ -75,14 +65,6 @@
         <h3>Collin College</h3>
         <p><em>May 2020</em></p>
         <p><em>GPA: 3.40</em></p>
-
-        <!-- 
-        <br>
-        <p>
-          <em> GPA: 3.40/4.00 &emsp;&emsp; May 2020</em>
-        </p> 
-        -->
-
         <br>
 
         <p>A.S., Computer Science</p>
@@ -309,7 +291,7 @@
 
 
     <hr id="contact">
-    <div class="line" id="contactline">
+    <div class="line" id="contactline" ontouchmove>
 
       <h2 class="linetitle">Contact Info</h2>
 

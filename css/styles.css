@@ -60,17 +60,15 @@ a li:hover {
   color: #203354;
 }
 
-
-/* hr tags are being used as margin 
-between each line and the top and bottom
-of the main tag */
+/* * hr tags are being used as margin 
+* between each .line and the top and bottom
+* of the main tag. */
+/* This was done so that when a list item
+of the navbar is clicked, we have some padding
+at the top of the page */
 hr {
   visibility: hidden;
   padding-top: 60px;;
-}
-
-#education {
-  padding-top: 60px;
 }
 
 main {
@@ -157,8 +155,11 @@ main {
   float:  right;
 }
 
-#educationline {
+#education {
+  padding-top: 60px;
+}
 
+#educationline {
 }
 
 #utdimg {
