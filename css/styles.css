@@ -92,7 +92,7 @@ main {
   overflow: auto;
   border: 1px solid lightgray;
   padding-bottom: 10px;
-  box-shadow: 0 4px 8px 0 rgba(141, 142, 143, 0.5), 
+  box-shadow: 0 4px 8px 0 rgba(143, 143, 141, 0.5), 
   0 6px 20px 0 rgba(207, 207, 207, 0.5);
 }
 
