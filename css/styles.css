@@ -108,6 +108,7 @@ main {
   display: inline-block;
   padding: 1% 2%;
   margin: 2%;
+  float: left;
 }
 
 .boxes ul li {
@@ -142,18 +143,14 @@ main {
   /* 21% width + 2% margin + 2% padding = 25% (* 3) = 100% */
   width: 21%;
 }
-
+/* 
 .left {
   float: left;
 }
 
-.center {
-  text-align-last: center; 
-}
-
 .right {
   float:  right;
-}
+} */
 
 #education {
   padding-top: 60px;
@@ -248,9 +245,9 @@ But those changes can be overwritten to make further
 changes to any selector you want */
 
 /* Responsive layout - when the screen is less
-than 1000px wide, make the columns stack on
+than 900px wide, make the columns stack on
 top of each other instead of next to each other */
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:900px){
   nav ul {
     width: 100%;
   }
