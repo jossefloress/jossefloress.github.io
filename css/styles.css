@@ -1,6 +1,7 @@
 /* CSS Variables */
 :root {
   --navy-color: #203354;
+  --border-color: lightgray;
 }
 
 * {
@@ -53,6 +54,7 @@ header {
   width: 100%;
   text-align: center;
   color: white;
+  z-index: 10;
 }
 
 header h1 {
@@ -74,9 +76,12 @@ nav {
     reaches the top,
     it'll stick to the top of the page 
   */
+  position: -webkit-sticky;
   position: sticky;
-  z-index: 3;
+  z-index: 9;
   top: 0;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 1em 0.75em 0 rgba(161, 161, 160, 0.3);
 }
 
 nav ul {
@@ -162,10 +167,10 @@ h3 {
   color: black;
   text-align: center;
   overflow: auto;
-  border: 1px solid lightgray;
+  border: 1px solid var(--border-color);
   padding-bottom: 10px;
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2);
+  /* offset-x | offset-y | blur-radius | spread-radius | color
+  box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2); */
 }
 
 .linetitle {
@@ -181,9 +186,7 @@ h3 {
   padding: 1% 2% 2% 2%;
   margin: 2%;
   float: left;
-  /* box-shadow: -0.25em 0.5em 1em 0 rgba(256, 256, 256, 0.5), 
-  0.25em -0.5em 1em 0 rgba(256, 256, 256, 0.5); */
-
+  /* box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2); */
 }
 
 .boxes ul li {
@@ -220,8 +223,6 @@ h3 {
 }
 
 #resumeline {
-  margin-top: 5px;
-  margin-bottom: 7px;
   border-radius: 0;
   border: none;
   background-color: transparent;
@@ -230,44 +231,30 @@ h3 {
 }
 
 #resume-btn {
-  /* border: 1px solid var(--navy-color); */
   border-radius: 15px;
   background-color: var(--navy-color);
-  /* transition: background-color 750ms; */
   width: 120px;
   height: 35px;
+  box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  
 }
 
 #resume-btn::before {
   position: absolute;
-  /* top: 100px; */
   display: block;
   content: "";
   width: 0%;
   height: inherit;
   border-radius: 15px;
-  /* border: 1px solid var(--navy-color); */
-
   background-color: whitesmoke;
-  
   transition: width 350ms;
 }
 
 #resume-btn:hover::before {
   width: inherit;
-  
-  /* background-color: whitesmoke; */
-}
-
-
-#resume-btn:hover > a h3 {
-  color: transparent;
-  visibility: hidden;
-}
-
-#resume-btn:hover > a img {
-  filter: none;
-  margin-left: 75%;
 }
 
 #resume-btn > a {
@@ -277,24 +264,28 @@ h3 {
 }
 
 #resume-btn > a img {
-  margin: 5px;
+  margin: 5px 3px;
   width: 20%;
-  /* flex-grow:1; */
-  /* flex-basis: 20%; */
-  /* max-width: 30px; */
   filter: invert();
   transition: all 0.6s ease 0s;
   z-index: 2;
-
 }
 
 #resume-btn > a h3 {
-  margin: 5px;
-  flex-grow: 3;
-  color: white;
-  /* transition: all 0.6s ease 0.5s; */
+  margin: 5px 3px;
 
+  color: white;
 }
+
+#resume-btn:hover > a img {
+  filter: none;
+  margin-left: 75%;
+}
+
+#resume-btn:hover > a h3 {
+  visibility: hidden;
+}
+
 
 #education {
   /* padding-top: 23px; */
@@ -361,12 +352,14 @@ footer li {
   background:  var(--navy-color);
   width: 6%;
   border-radius: 50px;
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   margin: 0 1%;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: -0.125em 0.25em 1em 0 rgba(143, 143, 141, .5);
 }
 
 footer li:hover{
-  background-color: rgb(241, 238, 238);
+  background-color: whitesmoke;
   color:  var(--navy-color);
 }
 
