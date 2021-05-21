@@ -1,0 +1,493 @@
+/* CSS Variables */
+:root {
+  --navy-color: #203354;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Gill Sans', 'Gill Sans MT', Calibri,
+   Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace; */
+  /* default box-sizing is content-box */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--navy-color);    /* color of the scroll thumb */
+}
+
+
+/*
+ ========================================== 
+  Global Classes
+ ========================================== 
+*/
+.grid-container.three-columns {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.grid-container.two-columns {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+
+
+
+/*
+ ========================================== 
+  Header
+ ========================================== 
+*/
+
+header {
+  background-color: var(--navy-color);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  /* width: auto; */
+  font-size: 275%;
+}
+
+
+/*
+ ========================================== 
+  Nav bar
+ ========================================== 
+*/
+
+nav {
+  background-color:  var(--navy-color);
+  /* 
+    This means that when the nav bar
+    reaches the top,
+    it'll stick to the top of the page 
+  */
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul a li {
+ /* 24.7% *4 = 98.8% + 1% padding = 99.8%  */
+  width: 24%;
+  display: inline-block;
+  padding: 1% 1% calc(1% - 5px) 1%;
+  margin: 0 auto; 
+  text-align: center;
+  color: white; 
+}
+
+
+
+nav li::after{
+  display: block;
+  content: "";
+  height: 5px;
+  width: 0;
+  border-radius: 15px;
+  background-color: transparent;
+  margin: 0 auto;
+  transition: background-color 750ms,
+              width 750ms;
+}
+
+nav li:hover::after {
+  width: 50%;
+  background-color: whitesmoke ;
+}
+
+
+/*
+ ========================================== 
+  Main
+ ========================================== 
+*/
+
+/* * hr tags are being used as margin 
+* between each .line and the top and bottom
+* of the main tag. */
+/* This was done so that when a list item
+of the navbar is clicked, we have some padding
+at the top of the page */
+hr {
+  visibility: hidden;
+  padding-top: 60px;
+}
+
+
+main {
+  /* Use the commented margin if you 
+ remove the an hr tags which are being used
+ as margin */
+  /* margin: 30px 0 65px 0; */
+}
+
+h3 {
+  color: var(--navy-color);
+}
+
+.line {
+  width: 65%;
+  /* Use the commented margin if you 
+ remove the an hr tags which are being used
+ as margin */
+  /* margin: 0px auto 40px auto; */
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  overflow: auto;
+  border: 1px solid lightgray;
+  padding-bottom: 10px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2);
+}
+
+.linetitle {
+  color:  var(--navy-color);
+  padding-top: 2%;
+  text-transform: uppercase;
+}
+
+
+.boxes {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1% 2% 2% 2%;
+  margin: 2%;
+  float: left;
+  /* box-shadow: -0.25em 0.5em 1em 0 rgba(256, 256, 256, 0.5), 
+  0.25em -0.5em 1em 0 rgba(256, 256, 256, 0.5); */
+
+}
+
+.boxes ul li {
+  margin: 8px 20px;
+  text-indent: -5px;
+  text-align: left;
+}
+
+.one
+{
+  /* 96% because I'm using box-sizing: border-box; */
+  /* 96% width + 2% margin + 2% padding = 100% */
+  width: 96%; 
+}
+
+/* Use this class when you want two boxes in one line. */
+.two {
+  /* 46% because I'm using box-sizing: border-box; */
+  /* 46% width + 2% margin + 2% padding = 50% (* 2) =100% */
+  width: 46%;
+}
+
+.three
+{
+  /* 29.33% because I'm using box-sizing: border-box; */
+  /* 29.33% width + 2% margin + 2% padding = 33.33% (* 3) = 99.99% */
+  width: 29.33%;
+}
+
+.four {
+  /* 21% because I'm using box-sizing: border-box; */
+  /* 21% width + 2% margin + 2% padding = 25% (* 4) = 100% */
+  width: 21%;
+}
+
+#resumeline {
+  margin-top: 5px;
+  margin-bottom: 7px;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding-bottom: 0;
+}
+
+#resume-btn {
+  /* border: 1px solid var(--navy-color); */
+  border-radius: 15px;
+  background-color: var(--navy-color);
+  /* transition: background-color 750ms; */
+  width: 120px;
+  height: 35px;
+}
+
+#resume-btn::before {
+  position: absolute;
+  /* top: 100px; */
+  display: block;
+  content: "";
+  width: 0%;
+  height: inherit;
+  border-radius: 15px;
+  /* border: 1px solid var(--navy-color); */
+
+  background-color: whitesmoke;
+  
+  transition: width 350ms;
+}
+
+#resume-btn:hover::before {
+  width: inherit;
+  
+  /* background-color: whitesmoke; */
+}
+
+
+#resume-btn:hover > a h3 {
+  color: transparent;
+  visibility: hidden;
+}
+
+#resume-btn:hover > a img {
+  filter: none;
+  margin-left: 75%;
+}
+
+#resume-btn > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resume-btn > a img {
+  margin: 5px;
+  width: 20%;
+  /* flex-grow:1; */
+  /* flex-basis: 20%; */
+  /* max-width: 30px; */
+  filter: invert();
+  transition: all 0.6s ease 0s;
+  z-index: 2;
+
+}
+
+#resume-btn > a h3 {
+  margin: 5px;
+  flex-grow: 3;
+  color: white;
+  /* transition: all 0.6s ease 0.5s; */
+
+}
+
+#education {
+  /* padding-top: 23px; */
+}
+
+#educationline {
+}
+
+#utdimg {
+  width: 50%;
+}
+
+#collinimg {
+  width: 35%;
+}
+
+#experienceline {
+
+}
+
+#projectsline .boxes p{
+  text-align: left;  
+}
+
+#certificationsline {
+
+}
+
+#moreline {
+
+}
+
+#contactline {
+  background-color:  var(--navy-color);
+}
+
+#contactline h2 {
+  color: white;
+}
+
+
+/*
+ ========================================== 
+  Footer
+ ========================================== 
+*/
+
+footer
+{
+  position: fixed;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: normal;
+  z-index: 10;
+}
+
+footer ul {
+  margin: 0 auto;
+}
+
+footer li {
+  display: inline-block;
+  background:  var(--navy-color);
+  width: 6%;
+  border-radius: 50px;
+  border: 0.5px solid white;
+  margin: 0 1%;
+}
+
+footer li:hover{
+  background-color: rgb(241, 238, 238);
+  color:  var(--navy-color);
+}
+
+footer li:hover > img {
+  filter: none;
+}
+
+footer li img {
+  width: 50%;
+  max-width: 25px;
+  margin-top: 3%;
+  filter: invert();
+}
+
+
+
+
+/*
+ ========================================== 
+  Media Queries
+ ========================================== 
+*/
+
+@media only screen and (max-width:1200px){
+  .line {
+    width: 80%;
+  }
+
+}
+
+/* The changes done to the large responsive layout 
+become the default for smaller layouts.
+But those changes can be overwritten to make further 
+changes to any selector you want */
+
+/* Responsive layout - when the screen is less
+than 900px wide, make the columns stack on
+top of each other instead of next to each other */
+@media only screen and (max-width:900px){
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul a li {
+    font-size: 1em;
+    padding: 2% 0.5%;
+  }
+
+  .line {
+    width: 85%;
+    overflow: auto;    
+  }
+
+  #utd {
+    width: 40%;
+  }
+
+  #collin {
+    width: 25%;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    /* 96% because I'm using box-sizing: border-box; */
+    /* 96% width + 2% margin + 2% padding = 100% */
+    width: 96%;
+  }
+
+  footer ul li {
+    width: 12%;
+  }
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide */
+@media only screen and (max-width:700px){
+
+  /* Here, the changes that me made to nav ul a li 
+    in the larger layout (max-width: 1000px) are being
+    overwritten.*/
+
+  nav ul a li {
+    font-size: 0.9em;
+    padding: 5% 0.5%;
+  }
+
+  .line {
+    width: 92%;
+  }
+
+
+  /* Since the larger layout made changes to nav ul, .one,
+    .two, .three, .four, #utd, and #collin, the changes
+    made there will be the default for the smaller layouts. */
+
+  footer ul a li {
+    width: 16%;
+  }
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 330px */
+  @media only screen and (max-width:330px){
+     header h1{
+      font-size: 225%;
+    }
+  
+    nav ul a li {
+      font-size: 0.8em;
+      width: 23%;
+    }
+
+    footer ul a li {
+      width: 20%;
+    }
+  }
+
+  
