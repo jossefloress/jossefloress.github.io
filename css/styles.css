@@ -14,9 +14,11 @@
   padding: 0;
 }
 
-html {
+/** Not supported by most Safari iOS versions This attribute is 
+    replaced by the script in main.js */
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body::-webkit-scrollbar {
   width: 12px;             
