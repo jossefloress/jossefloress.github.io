@@ -19,11 +19,11 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px;             
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--navy-color);    /* color of the scroll thumb */
+  background-color: var(--navy-color);    
 }
 
 
@@ -235,39 +235,38 @@ h3 {
 }
 
 #resume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   border-radius: 15px;
   background-color: var(--navy-color);
   width: 120px;
   height: 35px;
   box-shadow: -0.25em 0.5em 1em 0 rgba(143, 143, 141, 0.2);
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 15px;
-  
+  margin: 10px 15px 15px 15px;
 }
 
 #resume-btn::before {
-  position: absolute;
   display: block;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
   content: "";
   width: 0%;
   height: inherit;
   border-radius: 15px;
   background-color: whitesmoke;
-  transition: width 350ms;
+  border: 1px solid var(--border-color);  
+  transition: width 450ms, visibility 350ms;
 }
 
 #resume-btn:hover::before {
   width: inherit;
+  visibility: visible;
 }
 
-#resume-btn > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#resume-btn > a img {
+#resume-btn > img {
   margin: 5px 3px;
   width: 20%;
   filter: invert();
@@ -275,18 +274,17 @@ h3 {
   z-index: 2;
 }
 
-#resume-btn > a h3 {
+#resume-btn > h3 {
   margin: 5px 3px;
-
   color: white;
 }
 
-#resume-btn:hover > a img {
+#resume-btn:hover > img {
   filter: none;
   margin-left: 75%;
 }
 
-#resume-btn:hover > a h3 {
+#resume-btn:hover > h3 {
   visibility: hidden;
 }
 
