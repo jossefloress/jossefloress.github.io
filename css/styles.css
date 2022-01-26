@@ -458,6 +458,10 @@ top of each other instead of next to each other */
     width: 92%;
   }
 
+  .three-columns#courses {
+    display: block;
+  }
+
 
   /* Since the larger layout made changes to nav ul, .one,
     .two, .three, .four, #utd, and #collin, the changes
