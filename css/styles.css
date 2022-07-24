@@ -163,6 +163,8 @@ h3 {
 }
 
 .line {
+  display: flex;
+  flex-wrap: wrap;
   width: 65%;
   /* Use the commented margin if you 
  remove the an hr tags which are being used
@@ -181,6 +183,7 @@ h3 {
 }
 
 .linetitle {
+  width: 100%;
   color:  var(--navy-color);
   padding-top: 2%;
   text-transform: uppercase;
